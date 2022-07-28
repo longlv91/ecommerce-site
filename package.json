@@ -1,0 +1,26 @@
+{
+  "name": "ecommerce-site",
+  "version": "1.0.0",
+  "description": "Fullstack for ecommerce with Strapi, Nuxt, Nest, Angular.",
+  "main": "null",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:backend": "npm --prefix backend-strapi run develop",
+    "dev:frontend-nuxt": "npx wait-on http://localhost:1337 && npm --prefix frontend-nuxt run dev",
+    "dev-hold:frontend-next": "npx wait-on http://localhost:8000 && npm --prefix frontend-next run dev",
+    "dev": "cross-env FORCE_COLOR=1 npm-run-all -p dev:*"
+  },
+  "keywords": [
+    "ecommerce",
+    "nuxt",
+    "next",
+    "angular"
+  ],
+  "author": "LongLV",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "wait-on": "^6.0.1"
+  }
+}
