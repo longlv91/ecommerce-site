@@ -10,7 +10,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'frontend-nuxt',
+    title: 'E-commerce Frontend Site',
     htmlAttrs: {
       lang: 'en',
     },
@@ -21,6 +21,18 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+
+  },
+
+  loading: {
+    color: '#2F80ED',
+    height: '5px',
+  },
+
+  loadingIndicator: {
+    name: 'circle',
+    color: '#2F80ED',
+    background: '#FFFFFF',
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -40,8 +52,25 @@ export default {
     '@nuxtjs/tailwindcss',
   ],
 
+  tailwindcss: {
+    exposeConfig: true,
+  },
+
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
+    '@nuxtjs/strapi'
+  ],
+
+  strapi: {
+    url: process.env.API_URL || "http://localhost:1337",
+    prefix: '/api',
+    entities: [
+      'products',
+      'categories'
+    ],
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
