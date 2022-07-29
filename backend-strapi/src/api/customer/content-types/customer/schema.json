@@ -35,6 +35,12 @@
     },
     "billing_address": {
       "type": "text"
+    },
+    "oders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::oder.oder",
+      "mappedBy": "customer"
     }
   }
 }

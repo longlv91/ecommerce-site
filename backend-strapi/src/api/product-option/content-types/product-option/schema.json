@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_options",
+  "info": {
+    "singularName": "product-option",
+    "pluralName": "product-options",
+    "displayName": "ProductOption",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "value": {
+      "type": "json"
+    },
+    "option": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Color",
+        "Size",
+        "Type"
+      ],
+      "default": "None"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "product_options"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}
