@@ -1,5 +1,8 @@
 <template>
-  <Tutorial />
+  <div>
+    <TopNavigation />
+    <Tutorial />
+  </div>
 </template>
 
 <script>

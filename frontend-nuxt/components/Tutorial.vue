@@ -1,115 +1,563 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div
-    class="relative flex items-top justify-center min-h-screen bg-gray-100 sm:items-center sm:pt-0"
-  >
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
-      <a
-        class="flex justify-center pt-8 sm:pt-0"
-        href="https://nuxtjs.org"
-        target="_blank"
-      >
-        <svg
-          width="218"
-          height="45"
-          viewBox="0 0 159 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+  <div class="bg-white">
+    <div class="pt-6">
+      <nav aria-label="Breadcrumb">
+        <ol
+          role="list"
+          class="max-w-2xl mx-auto px-4 flex items-center space-x-2 sm:px-6 lg:max-w-7xl lg:px-8"
         >
-          <path
-            d="M55.5017 6.81866H60.1727L70.0719 22.9912V6.81866H74.3837V29.7345H69.7446L59.8135 13.5955V29.7345H55.5017V6.81866Z"
-            fill="#003543"
+          <li>
+            <div class="flex items-center">
+              <a href="#" class="mr-2 text-sm font-medium text-gray-900">
+                Men
+              </a>
+              <svg
+                width="16"
+                height="20"
+                viewBox="0 0 16 20"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                class="w-4 h-5 text-gray-300"
+              >
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+              </svg>
+            </div>
+          </li>
+
+          <li>
+            <div class="flex items-center">
+              <a href="#" class="mr-2 text-sm font-medium text-gray-900">
+                Clothing
+              </a>
+              <svg
+                width="16"
+                height="20"
+                viewBox="0 0 16 20"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                class="w-4 h-5 text-gray-300"
+              >
+                <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
+              </svg>
+            </div>
+          </li>
+
+          <li class="text-sm">
+            <a
+              href="#"
+              aria-current="page"
+              class="font-medium text-gray-500 hover:text-gray-600"
+            >
+              Basic Tee 6-Pack
+            </a>
+          </li>
+        </ol>
+      </nav>
+
+      <!-- Image gallery -->
+      <div
+        class="mt-6 max-w-2xl mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8"
+      >
+        <div
+          class="hidden aspect-w-3 aspect-h-4 rounded-lg overflow-hidden lg:block"
+        >
+          <img
+            src="https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg"
+            alt="Two each of gray, white, and black shirts laying flat."
+            class="w-full h-full object-center object-cover"
           />
-          <path
-            d="M93.657 29.7344H89.6389V27.1747C88.7241 28.9761 86.8628 29.9904 84.5113 29.9904C80.7869 29.9904 78.3684 27.3059 78.3684 23.4423V13.2339H82.3865V22.5976C82.3865 24.8566 83.7594 26.4276 85.8171 26.4276C88.0712 26.4276 89.6389 24.6598 89.6389 22.2377V13.2339H93.657V29.7344Z"
-            fill="#003543"
+        </div>
+        <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+          <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+            <img
+              src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg"
+              alt="Model wearing plain black basic tee."
+              class="w-full h-full object-center object-cover"
+            />
+          </div>
+          <div class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden">
+            <img
+              src="https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg"
+              alt="Model wearing plain gray basic tee."
+              class="w-full h-full object-center object-cover"
+            />
+          </div>
+        </div>
+        <div
+          class="aspect-w-4 aspect-h-5 sm:rounded-lg sm:overflow-hidden lg:aspect-w-3 lg:aspect-h-4"
+        >
+          <img
+            src="https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg"
+            alt="Model wearing plain white basic tee."
+            class="w-full h-full object-center object-cover"
           />
-          <path
-            d="M107.64 29.7344L103.784 24.2342L99.9291 29.7344H95.6492L101.596 21.1242L96.1074 13.2339H100.485L103.784 17.9821L107.051 13.2339H111.461L105.94 21.1242L111.886 29.7344H107.64Z"
-            fill="#003543"
-          />
-          <path
-            d="M120.053 8.25848V13.2339H124.627V16.6063H120.053V24.7974C120.053 25.0725 120.162 25.3363 120.356 25.531C120.55 25.7257 120.813 25.8353 121.087 25.8357H124.627V29.728H121.98C118.386 29.728 116.035 27.6323 116.035 23.9687V16.6095H112.801V13.2339H114.83C115.776 13.2339 116.327 12.6692 116.327 11.7349V8.25848H120.053Z"
-            fill="#003543"
-          />
-          <path
-            d="M134.756 24.5446V6.81866H139.066V23.1864C139.066 27.6067 136.943 29.7345 133.349 29.7345H128.332V25.8421H133.461C133.804 25.8421 134.134 25.7054 134.377 25.4621C134.619 25.2188 134.756 24.8888 134.756 24.5446Z"
-            fill="#003543"
-          />
-          <path
-            d="M141.649 22.0409H145.799C146.029 24.6006 147.728 26.2308 150.472 26.2308C152.923 26.2308 154.623 25.2501 154.623 23.2199C154.623 18.3085 142.331 21.7129 142.331 12.9395C142.334 9.17515 145.568 6.55945 150.215 6.55945C155.05 6.55945 158.317 9.34153 158.516 13.6306H154.388C154.193 11.6341 152.632 10.2918 150.207 10.2918C147.953 10.2918 146.548 11.3397 146.548 12.9427C146.548 18.0173 159 14.2226 159 23.1576C159 27.4131 155.504 30 150.474 30C145.279 30 141.882 26.8563 141.654 22.0441"
-            fill="#003543"
-          />
-          <path
-            d="M24.7203 29.704H41.1008C41.6211 29.7041 42.1322 29.5669 42.5828 29.3061C43.0334 29.0454 43.4075 28.6704 43.6675 28.2188C43.9275 27.7672 44.0643 27.2549 44.0641 26.7335C44.0639 26.2121 43.9266 25.6999 43.6662 25.2485L32.6655 6.15312C32.4055 5.70162 32.0315 5.32667 31.581 5.06598C31.1305 4.8053 30.6195 4.66805 30.0994 4.66805C29.5792 4.66805 29.0682 4.8053 28.6177 5.06598C28.1672 5.32667 27.7932 5.70162 27.5332 6.15312L24.7203 11.039L19.2208 1.48485C18.9606 1.03338 18.5864 0.658493 18.1358 0.397853C17.6852 0.137213 17.1741 0 16.6538 0C16.1336 0 15.6225 0.137213 15.1719 0.397853C14.7213 0.658493 14.3471 1.03338 14.0868 1.48485L0.397874 25.2485C0.137452 25.6999 0.000226653 26.2121 2.8053e-07 26.7335C-0.000226092 27.2549 0.136554 27.7672 0.396584 28.2188C0.656614 28.6704 1.03072 29.0454 1.48129 29.3061C1.93185 29.5669 2.44298 29.7041 2.96326 29.704H13.2456C17.3195 29.704 20.3239 27.9106 22.3912 24.4118L27.4102 15.7008L30.0986 11.039L38.1667 25.0422H27.4102L24.7203 29.704ZM13.0779 25.0374L5.9022 25.0358L16.6586 6.36589L22.0257 15.7008L18.4322 21.9401C17.0593 24.2103 15.4996 25.0374 13.0779 25.0374Z"
-            fill="#00DC82"
-          />
-        </svg>
-      </a>
-      <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
-        <h2 class="text-2xl leading-7 font-semibold">
-          Welcome to your Nuxt Application
-        </h2>
-        <p class="mt-3 text-gray-600">
-          We recommend you take a look at the
-          <a
-            href="https://nuxtjs.org"
-            target="_blank"
-            class="button--doc text-green-500 hover:underline"
-            >Nuxt documentation</a
-          >, whether you are new or have previous experience with the
-          framework.<br />
-        </p>
-        <p class="mt-4 pt-4 text-gray-800 border-t border-dashed">
-          To get started, remove
-          <code class="bg-gray-100 text-sm p-1 rounded border"
-            >components/Tutorial.vue</code
-          >
-          and start coding in
-          <code class="bg-gray-100 text-sm p-1 rounded border"
-            >pages/index.vue</code
-          >. Have fun!
-        </p>
+        </div>
       </div>
-      <div class="flex justify-center pt-4 space-x-2">
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank"
-          ><svg
-            class="w-6 h-6 text-gray-600 hover:text-gray-800 button--github"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            aria-hidden="true"
-            role="img"
-            width="32"
-            height="32"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 24 24"
+
+      <!-- Product info -->
+      <div
+        class="max-w-2xl mx-auto pt-10 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:pt-16 lg:pb-24 lg:px-8 lg:grid lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8"
+      >
+        <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+          <h1
+            class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl"
           >
-            <path
-              d="M12 2.247a10 10 0 0 0-3.162 19.487c.5.088.687-.212.687-.475c0-.237-.012-1.025-.012-1.862c-2.513.462-3.163-.613-3.363-1.175a3.636 3.636 0 0 0-1.025-1.413c-.35-.187-.85-.65-.013-.662a2.001 2.001 0 0 1 1.538 1.025a2.137 2.137 0 0 0 2.912.825a2.104 2.104 0 0 1 .638-1.338c-2.225-.25-4.55-1.112-4.55-4.937a3.892 3.892 0 0 1 1.025-2.688a3.594 3.594 0 0 1 .1-2.65s.837-.262 2.75 1.025a9.427 9.427 0 0 1 5 0c1.912-1.3 2.75-1.025 2.75-1.025a3.593 3.593 0 0 1 .1 2.65a3.869 3.869 0 0 1 1.025 2.688c0 3.837-2.338 4.687-4.563 4.937a2.368 2.368 0 0 1 .675 1.85c0 1.338-.012 2.413-.012 2.75c0 .263.187.575.687.475A10.005 10.005 0 0 0 12 2.247z"
-              fill="currentColor"
-            /></svg
-        ></a>
-        <a href="https://twitter.com/nuxt_js" target="_blank"
-          ><svg
-            class="w-6 h-6 text-gray-600 hover:text-gray-800"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            aria-hidden="true"
-            role="img"
-            width="32"
-            height="32"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23z"
-              fill="currentColor"
-            /></svg
-        ></a>
+            Basic Tee 6-Pack
+          </h1>
+        </div>
+
+        <!-- Options -->
+        <div class="mt-4 lg:mt-0 lg:row-span-3">
+          <h2 class="sr-only">Product information</h2>
+          <p class="text-3xl text-gray-900">$192</p>
+
+          <!-- Reviews -->
+          <div class="mt-6">
+            <h3 class="sr-only">Reviews</h3>
+            <div class="flex items-center">
+              <div class="flex items-center">
+                <!--
+                Heroicon name: solid/star
+
+                Active: "text-gray-900", Default: "text-gray-200"
+              -->
+                <svg
+                  class="text-gray-900 h-5 w-5 flex-shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <!-- Heroicon name: solid/star -->
+                <svg
+                  class="text-gray-900 h-5 w-5 flex-shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <!-- Heroicon name: solid/star -->
+                <svg
+                  class="text-gray-900 h-5 w-5 flex-shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <!-- Heroicon name: solid/star -->
+                <svg
+                  class="text-gray-900 h-5 w-5 flex-shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+
+                <!-- Heroicon name: solid/star -->
+                <svg
+                  class="text-gray-200 h-5 w-5 flex-shrink-0"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+              </div>
+              <p class="sr-only">4 out of 5 stars</p>
+              <a
+                href="#"
+                class="ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                >117 reviews</a
+              >
+            </div>
+          </div>
+
+          <form class="mt-10">
+            <!-- Colors -->
+            <div>
+              <h3 class="text-sm text-gray-900 font-medium">Color</h3>
+
+              <fieldset class="mt-4">
+                <legend class="sr-only">Choose a color</legend>
+                <div class="flex items-center space-x-3">
+                  <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                  <label
+                    class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400"
+                  >
+                    <input
+                      type="radio"
+                      name="color-choice"
+                      value="White"
+                      class="sr-only"
+                      aria-labelledby="color-choice-0-label"
+                    />
+                    <span id="color-choice-0-label" class="sr-only">
+                      White
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="h-8 w-8 bg-white border border-black border-opacity-10 rounded-full"
+                    ></span>
+                  </label>
+
+                  <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                  <label
+                    class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400"
+                  >
+                    <input
+                      type="radio"
+                      name="color-choice"
+                      value="Gray"
+                      class="sr-only"
+                      aria-labelledby="color-choice-1-label"
+                    />
+                    <span id="color-choice-1-label" class="sr-only">
+                      Gray
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="h-8 w-8 bg-gray-200 border border-black border-opacity-10 rounded-full"
+                    ></span>
+                  </label>
+
+                  <!--
+                  Active and Checked: "ring ring-offset-1"
+                  Not Active and Checked: "ring-2"
+                -->
+                  <label
+                    class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-900"
+                  >
+                    <input
+                      type="radio"
+                      name="color-choice"
+                      value="Black"
+                      class="sr-only"
+                      aria-labelledby="color-choice-2-label"
+                    />
+                    <span id="color-choice-2-label" class="sr-only">
+                      Black
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="h-8 w-8 bg-gray-900 border border-black border-opacity-10 rounded-full"
+                    ></span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <!-- Sizes -->
+            <div class="mt-10">
+              <div class="flex items-center justify-between">
+                <h3 class="text-sm text-gray-900 font-medium">Size</h3>
+                <a
+                  href="#"
+                  class="text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                  >Size guide</a
+                >
+              </div>
+
+              <fieldset class="mt-4">
+                <legend class="sr-only">Choose a size</legend>
+                <div
+                  class="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4"
+                >
+                  <!-- Active: "ring-2 ring-indigo-500" -->
+                  <label
+                    class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-gray-50 text-gray-200 cursor-not-allowed"
+                  >
+                    <input
+                      type="radio"
+                      name="size-choice"
+                      value="XXS"
+                      disabled
+                      class="sr-only"
+                      aria-labelledby="size-choice-0-label"
+                    />
+                    <span id="size-choice-0-label"> XXS </span>
+
+                    <span
+                      aria-hidden="true"
+                      class="absolute -inset-px rounded-md border-2 border-gray-200 pointer-events-none"
+                    >
+                      <svg
+                        class="absolute inset-0 w-full h-full text-gray-200 stroke-2"
+                        viewBox="0 0 100 100"
+                        preserveAspectRatio="none"
+                        stroke="currentColor"
+                      >
+                        <line
+                          x1="0"
+                          y1="100"
+                          x2="100"
+                          y2="0"
+                          vector-effect="non-scaling-stroke"
+                        />
+                      </svg>
+                    </span>
+                  </label>
+
+                  <!-- Active: "ring-2 ring-indigo-500" -->
+                  <label
+                    class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="size-choice"
+                      value="XS"
+                      class="sr-only"
+                      aria-labelledby="size-choice-1-label"
+                    />
+                    <span id="size-choice-1-label"> XS </span>
+
+                    <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                    <span
+                      class="absolute -inset-px rounded-md pointer-events-none"
+                      aria-hidden="true"
+                    ></span>
+                  </label>
+
+                  <!-- Active: "ring-2 ring-indigo-500" -->
+                  <label
+                    class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="size-choice"
+                      value="S"
+                      class="sr-only"
+                      aria-labelledby="size-choice-2-label"
+                    />
+                    <span id="size-choice-2-label"> S </span>
+
+                    <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                    <span
+                      class="absolute -inset-px rounded-md pointer-events-none"
+                      aria-hidden="true"
+                    ></span>
+                  </label>
+
+                  <!-- Active: "ring-2 ring-indigo-500" -->
+                  <label
+                    class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="size-choice"
+                      value="M"
+                      class="sr-only"
+                      aria-labelledby="size-choice-3-label"
+                    />
+                    <span id="size-choice-3-label"> M </span>
+
+                    <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                    <span
+                      class="absolute -inset-px rounded-md pointer-events-none"
+                      aria-hidden="true"
+                    ></span>
+                  </label>
+
+                  <!-- Active: "ring-2 ring-indigo-500" -->
+                  <label
+                    class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="size-choice"
+                      value="L"
+                      class="sr-only"
+                      aria-labelledby="size-choice-4-label"
+                    />
+                    <span id="size-choice-4-label"> L </span>
+
+                    <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                    <span
+                      class="absolute -inset-px rounded-md pointer-events-none"
+                      aria-hidden="true"
+                    ></span>
+                  </label>
+
+                  <!-- Active: "ring-2 ring-indigo-500" -->
+                  <label
+                    class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="size-choice"
+                      value="XL"
+                      class="sr-only"
+                      aria-labelledby="size-choice-5-label"
+                    />
+                    <span id="size-choice-5-label"> XL </span>
+
+                    <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                    <span
+                      class="absolute -inset-px rounded-md pointer-events-none"
+                      aria-hidden="true"
+                    ></span>
+                  </label>
+
+                  <!-- Active: "ring-2 ring-indigo-500" -->
+                  <label
+                    class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="size-choice"
+                      value="2XL"
+                      class="sr-only"
+                      aria-labelledby="size-choice-6-label"
+                    />
+                    <span id="size-choice-6-label"> 2XL </span>
+
+                    <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                    <span
+                      class="absolute -inset-px rounded-md pointer-events-none"
+                      aria-hidden="true"
+                    ></span>
+                  </label>
+
+                  <!-- Active: "ring-2 ring-indigo-500" -->
+                  <label
+                    class="group relative border rounded-md py-3 px-4 flex items-center justify-center text-sm font-medium uppercase hover:bg-gray-50 focus:outline-none sm:flex-1 sm:py-6 bg-white shadow-sm text-gray-900 cursor-pointer"
+                  >
+                    <input
+                      type="radio"
+                      name="size-choice"
+                      value="3XL"
+                      class="sr-only"
+                      aria-labelledby="size-choice-7-label"
+                    />
+                    <span id="size-choice-7-label"> 3XL </span>
+
+                    <!--
+                    Active: "border", Not Active: "border-2"
+                    Checked: "border-indigo-500", Not Checked: "border-transparent"
+                  -->
+                    <span
+                      class="absolute -inset-px rounded-md pointer-events-none"
+                      aria-hidden="true"
+                    ></span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <button
+              type="submit"
+              class="mt-10 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Add to bag
+            </button>
+          </form>
+        </div>
+
+        <div
+          class="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8"
+        >
+          <!-- Description and details -->
+          <div>
+            <h3 class="sr-only">Description</h3>
+
+            <div class="space-y-6">
+              <p class="text-base text-gray-900">
+                The Basic Tee 6-Pack allows you to fully express your vibrant
+                personality with three grayscale options. Feeling adventurous?
+                Put on a heather gray tee. Want to be a trendsetter? Try our
+                exclusive colorway: &quot;Black&quot;. Need to add an extra pop
+                of color to your outfit? Our white tee has you covered.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <h3 class="text-sm font-medium text-gray-900">Highlights</h3>
+
+            <div class="mt-4">
+              <ul role="list" class="pl-4 list-disc text-sm space-y-2">
+                <li class="text-gray-400">
+                  <span class="text-gray-600">Hand cut and sewn locally</span>
+                </li>
+
+                <li class="text-gray-400">
+                  <span class="text-gray-600"
+                    >Dyed with our proprietary colors</span
+                  >
+                </li>
+
+                <li class="text-gray-400">
+                  <span class="text-gray-600">Pre-washed &amp; pre-shrunk</span>
+                </li>
+
+                <li class="text-gray-400">
+                  <span class="text-gray-600">Ultra-soft 100% cotton</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <h2 class="text-sm font-medium text-gray-900">Details</h2>
+
+            <div class="mt-4 space-y-6">
+              <p class="text-sm text-gray-600">
+                The 6-Pack includes two black, two white, and two heather gray
+                Basic Tees. Sign up for our subscription service and be the
+                first to get new, exciting colors, like our upcoming
+                &quot;Charcoal Gray&quot; limited release.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

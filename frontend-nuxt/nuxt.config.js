@@ -2,7 +2,7 @@ export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
   server: {
-    port: 8000 // default: 3000
+    port: 8000, // default: 3000
   },
 
   // Target: https://go.nuxtjs.dev/config-target
@@ -21,7 +21,6 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-
   },
 
   loading: {
@@ -57,19 +56,12 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/auth-next',
-    '@nuxtjs/strapi'
-  ],
+  modules: ['@nuxtjs/axios', '@nuxtjs/auth-next', '@nuxtjs/strapi'],
 
   strapi: {
-    url: process.env.API_URL || "http://localhost:1337",
+    url: process.env.API_URL || 'http://localhost:1337',
     prefix: '/api',
-    entities: [
-      'products',
-      'categories'
-    ],
+    entities: ['products', 'categories'],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
