@@ -17,7 +17,7 @@
       "default": true,
       "required": true
     },
-    "type": {
+    "method": {
       "type": "enumeration",
       "enum": [
         "Cash on delivery",

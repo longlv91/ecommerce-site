@@ -4,7 +4,8 @@
   "info": {
     "singularName": "customer",
     "pluralName": "customers",
-    "displayName": "Customer"
+    "displayName": "Customer",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -25,14 +26,6 @@
       "type": "email",
       "unique": true
     },
-    "address": {
-      "type": "text",
-      "required": true
-    },
-    "default_shipping_address": {
-      "type": "text",
-      "required": true
-    },
     "billing_address": {
       "type": "text"
     },
@@ -41,6 +34,23 @@
       "relation": "oneToMany",
       "target": "api::oder.oder",
       "mappedBy": "customer"
+    },
+    "customer_cart": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer-cart.customer-cart"
+    },
+    "password": {
+      "type": "password",
+      "default": "123456",
+      "required": true,
+      "minLength": 6,
+      "private": true
+    },
+    "customer_addresses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer-address.customer-address"
     }
   }
 }
