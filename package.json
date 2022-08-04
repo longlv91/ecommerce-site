@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:backend": "npm --prefix backend-strapi run develop",
     "dev:frontend-nuxt": "npx wait-on http://localhost:1337 && npm --prefix frontend-nuxt run dev",
+    "devfrontend": "npm --prefix frontend-nuxt run dev",
     "dev-hold:frontend-next": "npx wait-on http://localhost:8000 && npm --prefix frontend-next run dev",
     "dev": "cross-env FORCE_COLOR=1 npm-run-all -p dev:*"
   },

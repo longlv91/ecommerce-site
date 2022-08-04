@@ -574,8 +574,10 @@
                     <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
                     <button
                       type="button"
-                      class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px"
+                      class="relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px"
+                      :class="{'border-indigo-600 text-indigo-600': selectedTab ==='women', 'border-transparent text-gray-700 hover:text-gray-800': selectedTab !=='women'}"
                       aria-expanded="false"
+                      @click="selectMenu('women')"
                     >
                       Women
                     </button>
@@ -591,234 +593,242 @@
                     From: "opacity-100"
                     To: "opacity-0"
                 -->
-                  <div
-                    class="absolute top-full inset-x-0 text-sm text-gray-500"
+                  <Transition
+                    name="fade"
+                    type="animation"
+                    mode="out-in"
+                    :duration="{ enter: 200, leave: 150 }"
                   >
-                    <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
                     <div
-                      class="absolute inset-0 top-1/2 bg-white shadow"
-                      aria-hidden="true"
-                    ></div>
+                      v-if="selectedTab === 'women'"
+                      class="absolute top-full inset-x-0 text-sm text-gray-500"
+                    >
+                      <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                      <div
+                        class="absolute inset-0 top-1/2 bg-white shadow"
+                        aria-hidden="true"
+                      ></div>
 
-                    <div class="relative bg-white">
-                      <div class="max-w-7xl mx-auto px-8">
-                        <div class="grid grid-cols-2 gap-y-10 gap-x-8 py-16">
-                          <div class="col-start-2 grid grid-cols-2 gap-x-8">
-                            <div class="group relative text-base sm:text-sm">
-                              <div
-                                class="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75"
-                              >
-                                <img
-                                  src="https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg"
-                                  alt="Models sitting back to back, wearing Basic Tee in black and bone."
-                                  class="object-center object-cover"
-                                />
+                      <div class="relative bg-white">
+                        <div class="max-w-7xl mx-auto px-8">
+                          <div class="grid grid-cols-2 gap-y-10 gap-x-8 py-16">
+                            <div class="col-start-2 grid grid-cols-2 gap-x-8">
+                              <div class="group relative text-base sm:text-sm">
+                                <div
+                                  class="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75"
+                                >
+                                  <img
+                                    src="https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg"
+                                    alt="Models sitting back to back, wearing Basic Tee in black and bone."
+                                    class="object-center object-cover"
+                                  />
+                                </div>
+                                <a
+                                  href="#"
+                                  class="mt-6 block font-medium text-gray-900"
+                                >
+                                  <span
+                                    class="absolute z-10 inset-0"
+                                    aria-hidden="true"
+                                  ></span>
+                                  New Arrivals
+                                </a>
+                                <p aria-hidden="true" class="mt-1">Shop now</p>
                               </div>
-                              <a
-                                href="#"
-                                class="mt-6 block font-medium text-gray-900"
-                              >
-                                <span
-                                  class="absolute z-10 inset-0"
-                                  aria-hidden="true"
-                                ></span>
-                                New Arrivals
-                              </a>
-                              <p aria-hidden="true" class="mt-1">Shop now</p>
-                            </div>
 
-                            <div class="group relative text-base sm:text-sm">
-                              <div
-                                class="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75"
-                              >
-                                <img
-                                  src="https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg"
-                                  alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees."
-                                  class="object-center object-cover"
-                                />
+                              <div class="group relative text-base sm:text-sm">
+                                <div
+                                  class="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75"
+                                >
+                                  <img
+                                    src="https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg"
+                                    alt="Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees."
+                                    class="object-center object-cover"
+                                  />
+                                </div>
+                                <a
+                                  href="#"
+                                  class="mt-6 block font-medium text-gray-900"
+                                >
+                                  <span
+                                    class="absolute z-10 inset-0"
+                                    aria-hidden="true"
+                                  ></span>
+                                  Basic Tees
+                                </a>
+                                <p aria-hidden="true" class="mt-1">Shop now</p>
                               </div>
-                              <a
-                                href="#"
-                                class="mt-6 block font-medium text-gray-900"
-                              >
-                                <span
-                                  class="absolute z-10 inset-0"
-                                  aria-hidden="true"
-                                ></span>
-                                Basic Tees
-                              </a>
-                              <p aria-hidden="true" class="mt-1">Shop now</p>
                             </div>
-                          </div>
-                          <div
-                            class="row-start-1 grid grid-cols-3 gap-y-10 gap-x-8 text-sm"
-                          >
-                            <div>
-                              <p
-                                id="Clothing-heading"
-                                class="font-medium text-gray-900"
-                              >
-                                Clothing
-                              </p>
-                              <ul
-                                role="list"
-                                aria-labelledby="Clothing-heading"
-                                class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                              >
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Tops
-                                  </a>
-                                </li>
+                            <div
+                              class="row-start-1 grid grid-cols-3 gap-y-10 gap-x-8 text-sm"
+                            >
+                              <div>
+                                <p
+                                  id="Clothing-heading"
+                                  class="font-medium text-gray-900"
+                                >
+                                  Clothing
+                                </p>
+                                <ul
+                                  role="list"
+                                  aria-labelledby="Clothing-heading"
+                                  class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                >
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Tops
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Dresses
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Dresses
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Pants
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Pants
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Denim
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Denim
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Sweaters
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Sweaters
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    T-Shirts
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      T-Shirts
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Jackets
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Jackets
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Activewear
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Activewear
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Browse All
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Browse All
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
 
-                            <div>
-                              <p
-                                id="Accessories-heading"
-                                class="font-medium text-gray-900"
-                              >
-                                Accessories
-                              </p>
-                              <ul
-                                role="list"
-                                aria-labelledby="Accessories-heading"
-                                class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                              >
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Watches
-                                  </a>
-                                </li>
+                              <div>
+                                <p
+                                  id="Accessories-heading"
+                                  class="font-medium text-gray-900"
+                                >
+                                  Accessories
+                                </p>
+                                <ul
+                                  role="list"
+                                  aria-labelledby="Accessories-heading"
+                                  class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                >
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Watches
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Wallets
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Wallets
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Bags
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Bags
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Sunglasses
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Sunglasses
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Hats
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Hats
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Belts
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Belts
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
 
-                            <div>
-                              <p
-                                id="Brands-heading"
-                                class="font-medium text-gray-900"
-                              >
-                                Brands
-                              </p>
-                              <ul
-                                role="list"
-                                aria-labelledby="Brands-heading"
-                                class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                              >
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Full Nelson
-                                  </a>
-                                </li>
+                              <div>
+                                <p
+                                  id="Brands-heading"
+                                  class="font-medium text-gray-900"
+                                >
+                                  Brands
+                                </p>
+                                <ul
+                                  role="list"
+                                  aria-labelledby="Brands-heading"
+                                  class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                >
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Full Nelson
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    My Way
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      My Way
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Re-Arranged
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Re-Arranged
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Counterfeit
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Counterfeit
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Significant Other
-                                  </a>
-                                </li>
-                              </ul>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Significant Other
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Transition>
                 </div>
 
                 <div class="flex">
@@ -826,8 +836,10 @@
                     <!-- Item active: "border-indigo-600 text-indigo-600", Item inactive: "border-transparent text-gray-700 hover:text-gray-800" -->
                     <button
                       type="button"
-                      class="border-transparent text-gray-700 hover:text-gray-800 relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px"
+                      class="relative z-10 flex items-center transition-colors ease-out duration-200 text-sm font-medium border-b-2 -mb-px pt-px"
+                      :class="{'border-indigo-600 text-indigo-600': selectedTab ==='men', 'border-transparent text-gray-700 hover:text-gray-800': selectedTab !=='men'}"
                       aria-expanded="false"
+                      @click="selectMenu('men')"
                     >
                       Men
                     </button>
@@ -843,216 +855,223 @@
                     From: "opacity-100"
                     To: "opacity-0"
                 -->
-                  <div
-                    class="absolute top-full inset-x-0 text-sm text-gray-500"
+                  <Transition
+                    name="fade"
+                    mode="out-in"
+                    :duration="{ enter: 200, leave: 150 }"
                   >
-                    <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
                     <div
-                      class="absolute inset-0 top-1/2 bg-white shadow"
-                      aria-hidden="true"
-                    ></div>
+                      v-if="selectedTab === 'men'"
+                      class="absolute top-full inset-x-0 text-sm text-gray-500"
+                    >
+                      <!-- Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow -->
+                      <div
+                        class="absolute inset-0 top-1/2 bg-white shadow"
+                        aria-hidden="true"
+                      ></div>
 
-                    <div class="relative bg-white">
-                      <div class="max-w-7xl mx-auto px-8">
-                        <div class="grid grid-cols-2 gap-y-10 gap-x-8 py-16">
-                          <div class="col-start-2 grid grid-cols-2 gap-x-8">
-                            <div class="group relative text-base sm:text-sm">
-                              <div
-                                class="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75"
-                              >
-                                <img
-                                  src="https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg"
-                                  alt="Drawstring top with elastic loop closure and textured interior padding."
-                                  class="object-center object-cover"
-                                />
+                      <div class="relative bg-white">
+                        <div class="max-w-7xl mx-auto px-8">
+                          <div class="grid grid-cols-2 gap-y-10 gap-x-8 py-16">
+                            <div class="col-start-2 grid grid-cols-2 gap-x-8">
+                              <div class="group relative text-base sm:text-sm">
+                                <div
+                                  class="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75"
+                                >
+                                  <img
+                                    src="https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg"
+                                    alt="Drawstring top with elastic loop closure and textured interior padding."
+                                    class="object-center object-cover"
+                                  />
+                                </div>
+                                <a
+                                  href="#"
+                                  class="mt-6 block font-medium text-gray-900"
+                                >
+                                  <span
+                                    class="absolute z-10 inset-0"
+                                    aria-hidden="true"
+                                  ></span>
+                                  New Arrivals
+                                </a>
+                                <p aria-hidden="true" class="mt-1">Shop now</p>
                               </div>
-                              <a
-                                href="#"
-                                class="mt-6 block font-medium text-gray-900"
-                              >
-                                <span
-                                  class="absolute z-10 inset-0"
-                                  aria-hidden="true"
-                                ></span>
-                                New Arrivals
-                              </a>
-                              <p aria-hidden="true" class="mt-1">Shop now</p>
-                            </div>
 
-                            <div class="group relative text-base sm:text-sm">
-                              <div
-                                class="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75"
-                              >
-                                <img
-                                  src="https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg"
-                                  alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt."
-                                  class="object-center object-cover"
-                                />
+                              <div class="group relative text-base sm:text-sm">
+                                <div
+                                  class="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75"
+                                >
+                                  <img
+                                    src="https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg"
+                                    alt="Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt."
+                                    class="object-center object-cover"
+                                  />
+                                </div>
+                                <a
+                                  href="#"
+                                  class="mt-6 block font-medium text-gray-900"
+                                >
+                                  <span
+                                    class="absolute z-10 inset-0"
+                                    aria-hidden="true"
+                                  ></span>
+                                  Artwork Tees
+                                </a>
+                                <p aria-hidden="true" class="mt-1">Shop now</p>
                               </div>
-                              <a
-                                href="#"
-                                class="mt-6 block font-medium text-gray-900"
-                              >
-                                <span
-                                  class="absolute z-10 inset-0"
-                                  aria-hidden="true"
-                                ></span>
-                                Artwork Tees
-                              </a>
-                              <p aria-hidden="true" class="mt-1">Shop now</p>
                             </div>
-                          </div>
-                          <div
-                            class="row-start-1 grid grid-cols-3 gap-y-10 gap-x-8 text-sm"
-                          >
-                            <div>
-                              <p
-                                id="Clothing-heading"
-                                class="font-medium text-gray-900"
-                              >
-                                Clothing
-                              </p>
-                              <ul
-                                role="list"
-                                aria-labelledby="Clothing-heading"
-                                class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                              >
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Tops
-                                  </a>
-                                </li>
+                            <div
+                              class="row-start-1 grid grid-cols-3 gap-y-10 gap-x-8 text-sm"
+                            >
+                              <div>
+                                <p
+                                  id="Clothing-heading"
+                                  class="font-medium text-gray-900"
+                                >
+                                  Clothing
+                                </p>
+                                <ul
+                                  role="list"
+                                  aria-labelledby="Clothing-heading"
+                                  class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                >
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Tops
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Pants
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Pants
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Sweaters
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Sweaters
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    T-Shirts
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      T-Shirts
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Jackets
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Jackets
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Activewear
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Activewear
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Browse All
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Browse All
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
 
-                            <div>
-                              <p
-                                id="Accessories-heading"
-                                class="font-medium text-gray-900"
-                              >
-                                Accessories
-                              </p>
-                              <ul
-                                role="list"
-                                aria-labelledby="Accessories-heading"
-                                class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                              >
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Watches
-                                  </a>
-                                </li>
+                              <div>
+                                <p
+                                  id="Accessories-heading"
+                                  class="font-medium text-gray-900"
+                                >
+                                  Accessories
+                                </p>
+                                <ul
+                                  role="list"
+                                  aria-labelledby="Accessories-heading"
+                                  class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                >
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Watches
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Wallets
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Wallets
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Bags
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Bags
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Sunglasses
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Sunglasses
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Hats
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Hats
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Belts
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Belts
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
 
-                            <div>
-                              <p
-                                id="Brands-heading"
-                                class="font-medium text-gray-900"
-                              >
-                                Brands
-                              </p>
-                              <ul
-                                role="list"
-                                aria-labelledby="Brands-heading"
-                                class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
-                              >
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Re-Arranged
-                                  </a>
-                                </li>
+                              <div>
+                                <p
+                                  id="Brands-heading"
+                                  class="font-medium text-gray-900"
+                                >
+                                  Brands
+                                </p>
+                                <ul
+                                  role="list"
+                                  aria-labelledby="Brands-heading"
+                                  class="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                >
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Re-Arranged
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Counterfeit
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Counterfeit
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    Full Nelson
-                                  </a>
-                                </li>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      Full Nelson
+                                    </a>
+                                  </li>
 
-                                <li class="flex">
-                                  <a href="#" class="hover:text-gray-800">
-                                    My Way
-                                  </a>
-                                </li>
-                              </ul>
+                                  <li class="flex">
+                                    <a href="#" class="hover:text-gray-800">
+                                      My Way
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </Transition>
                 </div>
 
                 <a
@@ -1160,5 +1179,19 @@
 <script type="text/javascript">
 export default {
   name: 'TopNavigation',
+  data: () => {
+    return {
+      selectedTab: '',
+    }
+  },
+  methods: {
+    selectMenu(tab) {
+      if (this.selectedTab !== tab) {
+        this.selectedTab = tab
+      } else {
+        this.selectedTab = ''
+      }
+    },
+  },
 }
 </script>
