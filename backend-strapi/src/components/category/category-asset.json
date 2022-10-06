@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_category_category_assets",
+  "info": {
+    "displayName": "CategoryAsset",
+    "icon": "image",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "thumbnail": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.image-component"
+    },
+    "banners": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.image-component"
+    }
+  }
+}

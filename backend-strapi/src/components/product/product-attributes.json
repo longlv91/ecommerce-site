@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_product_product_attributes",
+  "info": {
+    "displayName": "ProductAttributes",
+    "icon": "parking"
+  },
+  "options": {},
+  "attributes": {
+    "show_on_ui": {
+      "type": "boolean",
+      "default": true
+    },
+    "free_ship": {
+      "type": "boolean",
+      "default": false
+    },
+    "variant_text": {
+      "type": "string"
+    },
+    "variant_type": {
+      "type": "enumeration",
+      "enum": [
+        "Text",
+        "Image"
+      ]
+    }
+  }
+}

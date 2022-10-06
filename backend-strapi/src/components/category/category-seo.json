@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_category_category_seos",
+  "info": {
+    "displayName": "CategorySEO",
+    "icon": "audio-description"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "keyword": {
+      "type": "string"
+    },
+    "meta_keyword": {
+      "type": "string"
+    },
+    "meta_description": {
+      "type": "string"
+    }
+  }
+}

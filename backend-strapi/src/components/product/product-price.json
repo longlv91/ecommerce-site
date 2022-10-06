@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_product_product_prices",
+  "info": {
+    "displayName": "ProductPrice",
+    "icon": "donate"
+  },
+  "options": {},
+  "attributes": {
+    "sell_price": {
+      "type": "biginteger"
+    },
+    "cost": {
+      "type": "biginteger"
+    },
+    "start_date": {
+      "type": "datetime"
+    },
+    "end_date": {
+      "type": "datetime"
+    }
+  }
+}

@@ -25,19 +25,29 @@
       "required": true,
       "unique": true
     },
-    "thumbnail": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
     "products": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "inversedBy": "categories"
+      "mappedBy": "categories"
+    },
+    "media": {
+      "type": "component",
+      "repeatable": false,
+      "component": "category.category-asset"
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "status": {
+      "type": "boolean",
+      "default": true
+    },
+    "isVisible": {
+      "type": "boolean",
+      "default": true
     }
   }
 }

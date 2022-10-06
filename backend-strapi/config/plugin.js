@@ -13,4 +13,16 @@ module.exports = ({ env }) => ({
   //   enabled: true,
   //   resolve: "./src/plugins/wysiwyg", // path to plugin folder
   // },
+  graphql: {
+    config: {
+      endpoint: '/graphql',
+      shadowCRUD: true,
+      playgroundAlways: false,
+      depthLimit: 7,
+      amountLimit: 100,
+      apolloServer: {
+        tracing: false,
+      },
+    },
+  },
 });
