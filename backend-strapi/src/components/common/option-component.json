@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_common_option_components",
+  "info": {
+    "displayName": "OptionComponent",
+    "icon": "assistive-listening-systems"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Color",
+        "Size",
+        "Type",
+        "Quantity",
+        "Style",
+        "Model",
+        "Version"
+      ]
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

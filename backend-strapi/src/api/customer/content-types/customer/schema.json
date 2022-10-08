@@ -26,14 +26,6 @@
       "type": "email",
       "unique": true
     },
-    "billing_address": {
-      "type": "text"
-    },
-    "customer_cart": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::customer-cart.customer-cart"
-    },
     "password": {
       "type": "password",
       "default": "123456",
@@ -41,10 +33,10 @@
       "minLength": 6,
       "private": true
     },
-    "customer_addresses": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::customer-address.customer-address"
+    "address": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.address-component"
     }
   }
 }

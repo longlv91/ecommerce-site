@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_common_address_components",
+  "info": {
+    "displayName": "AddressComponent",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "country": {
+      "type": "string"
+    },
+    "province": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "ward": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "string"
+    },
+    "email_address": {
+      "type": "email"
+    },
+    "address_type": {
+      "type": "enumeration",
+      "enum": [
+        "Shiping Address",
+        "Billing Address"
+      ]
+    }
+  }
+}

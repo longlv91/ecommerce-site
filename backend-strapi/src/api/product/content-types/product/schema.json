@@ -23,18 +23,12 @@
       "unique": true
     },
     "short_description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "long_description": {
-      "type": "richtext"
-    },
-    "thumbnail": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
+      "type": "richtext",
+      "required": true
     },
     "categories": {
       "type": "relation",
@@ -45,12 +39,24 @@
     "price": {
       "type": "component",
       "repeatable": false,
-      "component": "product.product-price"
+      "component": "product.product-price",
+      "required": false
     },
     "variant": {
       "type": "component",
       "repeatable": true,
       "component": "product.product-attributes"
+    },
+    "media_sources": {
+      "type": "component",
+      "repeatable": false,
+      "component": "product.product-asset",
+      "required": true
+    },
+    "product_options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.product-option-set"
     }
   }
 }

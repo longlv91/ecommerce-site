@@ -2,7 +2,8 @@
   "collectionName": "components_product_product_attributes",
   "info": {
     "displayName": "ProductAttributes",
-    "icon": "parking"
+    "icon": "parking",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -23,6 +24,11 @@
         "Text",
         "Image"
       ]
+    },
+    "price": {
+      "type": "component",
+      "repeatable": false,
+      "component": "product.product-price"
     }
   }
 }

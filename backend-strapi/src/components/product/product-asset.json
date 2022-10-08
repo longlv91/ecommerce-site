@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_product_product_assets",
+  "info": {
+    "displayName": "ProductAsset"
+  },
+  "options": {},
+  "attributes": {
+    "thumbnail": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.image-component"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.image-component"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_product_product_option_sets",
+  "info": {
+    "displayName": "ProductOptionSet",
+    "icon": "braille",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.option-component"
+    },
+    "price": {
+      "type": "component",
+      "repeatable": false,
+      "component": "product.product-price"
+    }
+  }
+}

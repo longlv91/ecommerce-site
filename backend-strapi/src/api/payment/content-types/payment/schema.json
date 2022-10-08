@@ -26,9 +26,6 @@
       ],
       "default": "Cash on delivery",
       "required": true
-    },
-    "options": {
-      "type": "json"
     }
   }
 }
