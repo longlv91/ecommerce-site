@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "order_name": {
+      "type": "string"
+    },
+    "shipping_address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.address-component",
+      "required": true
+    },
+    "billing_address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "common.address-component",
+      "required": true
+    },
+    "metafields": {
+      "type": "json"
+    },
+    "order_id": {
+      "type": "uid",
+      "required": true
+    },
+    "line_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "order.line-item"
+    }
+  }
+}
