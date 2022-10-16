@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "161f7775-7309-4738-a6b8-a28cad371f43",
+		"name": "Local-Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4242643"
+	},
+	"item": [
+		{
+			"name": "Get all categories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{strapi_url}}/api/categories?populate=thumbnail",
+					"host": [
+						"{{strapi_url}}"
+					],
+					"path": [
+						"api",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "thumbnail"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{strapi_url}}/api/products?populate=*",
+					"host": [
+						"{{strapi_url}}"
+					],
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "*"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GraphQL - Mutation authentication",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "# Write your query or mutation here\r\nmutation createCategory($data: CategoryInput!) {\r\n  category: createCategory (data: $data) {\r\n    data {\r\n      id\r\n        attributes {\r\n            name\r\n            slug\r\n        }\r\n    }\r\n  }\r\n}\r\n",
+						"variables": "{\r\n    \"data\": {\r\n        \"name\": \"Demo1\",\r\n        \"slug\": \"demo1\",\r\n        \"description\": \"demo\"\r\n    }\r\n}"
+					}
+				},
+				"url": {
+					"raw": "{{strapi_url}}/graphql",
+					"host": [
+						"{{strapi_url}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GraphQL - Query category by Id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "# Write your query or mutation here\r\nquery test($id: ID) {\r\n  category (id: $id) {\r\n    data {\r\n      id\r\n      attributes {\r\n        slug\r\n        name\r\n        media {\r\n          thumbnail {\r\n            alt\r\n            image {\r\n              data {\r\n                attributes {\r\n                  url\r\n                  previewUrl\r\n                }\r\n              }\r\n            }\r\n          }\r\n        }\r\n        products {\r\n          data {\r\n            attributes {\r\n              name\r\n              sku\r\n            }\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+						"variables": "{\r\n    \"id\": \"1\"\r\n}"
+					}
+				},
+				"url": {
+					"raw": "{{strapi_url}}/graphql",
+					"host": [
+						"{{strapi_url}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GraphQL - Mutation create category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "# Write your query or mutation here\r\nmutation createCategory($data: CategoryInput!) {\r\n  category: createCategory (data: $data) {\r\n    data {\r\n      id\r\n        attributes {\r\n            name\r\n            slug\r\n        }\r\n    }\r\n  }\r\n}\r\n",
+						"variables": "{\r\n    \"data\": {\r\n        \"name\": \"Demo1\",\r\n        \"slug\": \"demo1\",\r\n        \"description\": \"demo\"\r\n    }\r\n}"
+					}
+				},
+				"url": {
+					"raw": "{{strapi_url}}/graphql",
+					"host": [
+						"{{strapi_url}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GraphQL - Mutation update category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "# Write your query or mutation here\r\nmutation updateCategory($id: ID!, $data: CategoryInput!) {\r\n  category: updateCategory (id: $id, data: $data) {\r\n    data {\r\n      id\r\n        attributes {\r\n            name\r\n            slug\r\n        }\r\n    }\r\n  }\r\n}\r\n",
+						"variables": "{\r\n    \"id\": 4,\r\n    \"data\": {\r\n        \"name\": \"Demo1\",\r\n        \"slug\": \"demo-1\",\r\n        \"description\": \"demo\"\r\n    }\r\n}"
+					}
+				},
+				"url": {
+					"raw": "{{strapi_url}}/graphql",
+					"host": [
+						"{{strapi_url}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GraphQL - Query categories",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "# Write your query or mutation here\r\nquery {\r\n  categories {\r\n    data {\r\n      id\r\n      attributes {\r\n        status\r\n        slug\r\n        name\r\n        media {\r\n          thumbnail {\r\n            alt\r\n            image {\r\n              data {\r\n                attributes {\r\n                  url\r\n                  previewUrl\r\n                }\r\n              }\r\n            }\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+						"variables": "{\r\n    \"$id\": \"1\"\r\n}"
+					}
+				},
+				"url": {
+					"raw": "{{strapi_url}}/graphql",
+					"host": [
+						"{{strapi_url}}"
+					],
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
