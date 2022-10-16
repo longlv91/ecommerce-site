@@ -10,10 +10,23 @@
     "name": {
       "type": "string"
     },
-    "options": {
-      "type": "component",
-      "repeatable": false,
-      "component": "common.option-component"
+    "metafields": {
+      "type": "json"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Color",
+        "Size",
+        "Type",
+        "Quantity",
+        "Style",
+        "Model",
+        "Version"
+      ]
+    },
+    "value": {
+      "type": "string"
     },
     "price": {
       "type": "component",

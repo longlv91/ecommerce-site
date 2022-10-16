@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_navigation_menu_items",
+  "info": {
+    "displayName": "MenuItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "component",
+      "repeatable": true,
+      "component": "common.image-component"
+    },
+    "visibility": {
+      "type": "enumeration",
+      "enum": [
+        "All",
+        "Mobile",
+        "Desktop"
+      ]
+    },
+    "submenuitems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation.sub-menu-item"
+    }
+  }
+}

@@ -10,14 +10,14 @@
     "strapi": "strapi"
   },
   "devDependencies": {
-    "@strapi/plugin-documentation": "^4.2.3"
+    "@strapi/plugin-documentation": "^4.4.3"
   },
   "dependencies": {
     "@strapi/plugin-graphql": "^4.2.3",
-    "@strapi/plugin-i18n": "4.2.3",
-    "@strapi/plugin-users-permissions": "4.2.3",
-    "@strapi/provider-upload-local": "^4.3.0",
-    "@strapi/strapi": "4.2.3",
+    "@strapi/plugin-i18n": "4.4.3",
+    "@strapi/plugin-users-permissions": "4.4.3",
+    "@strapi/provider-upload-local": "^4.4.3",
+    "@strapi/strapi": "4.4.3",
     "better-sqlite3": "7.4.6",
     "mysql": "^2.18.1",
     "strapi-plugin-local-image-sharp": "^1.2.0"

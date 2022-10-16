@@ -38,6 +38,16 @@
       "type": "component",
       "repeatable": true,
       "component": "order.line-item"
+    },
+    "payment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment.payment"
+    },
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
     }
   }
 }
